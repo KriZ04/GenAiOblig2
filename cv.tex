@@ -1,0 +1,100 @@
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ===== Stil / språk (pdfLaTeX) =====
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[scale=0.86]{geometry}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% Bedre linjebryting/lenker
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\Urlmuskip=0mu plus 2mu
+\emergencystretch=2em
+\sloppy
+
+
+% ===== Layout-tweaks =====
+\setlength{\hintscolumnwidth}{2.8cm}         % venstrekolonnen
+
+% ===== Personlig info =====
+\name{Christian}{[Etternavn]}
+\title{Student -- Fremtidig Dataingeniør}
+\address{Halden, Norge}{}
+\email{din@epost.no}
+\phone[mobile]{+47 [telefon]}
+% Brukernavn i stedet for fulle URL-er for best linjebryting:
+\social[github]{dittbrukernavn}
+\social[linkedin]{dittprofil}
+% Valgfritt bilde: legg filen ved eller behold kommentert
+% \photo[70pt][0.4pt]{cvphoto.jpg}
+
+\begin{document}
+\makecvtitle
+
+% ===== Sammendrag =====
+\section{Introduksjon / Kort sammendrag}
+\cvitem{}{
+Student og \textbf{fremtidig dataingeniør} med spesialisering i \textbf{backend-utvikling} og systemarkitektur.
+Løsningsorientert og klar for utfordringer, med fokus på å bygge effektive, skalerbare og robuste kjernesystemer i \textbf{.NET / C\#}.
+Søker jobb eller praksisplass hvor jeg kan bidra med teknisk dybde og initiativ.
+}
+
+% ===== Teknisk kompetanse =====
+\section{Teknisk kompetanse (Backend \& Verktøy)}
+\cvitem{Kjernestakk}{Ekspertise i \textbf{.NET / C\#} med vekt på \textbf{skalerbarhet} og \textbf{robusthet}.}
+\cvitem{Data}{Erfaring med relasjonsdatabaser og \textbf{SQL}-optimalisering. Håndtering av ustrukturert data (\textbf{JSON}).}
+\cvitem{DevOps}{\textbf{Git}, \textbf{Azure DevOps} (CI/CD), profesjonell kodeflyt i \textbf{Visual Studio}.}
+\cvitem{Frontend}{Grunnleggende \textbf{HTML/CSS} og \textbf{Blazor} for integrasjon mot backend.}
+
+% ===== Prosjekter =====
+\section{Utvalgte prosjekter (Praktisk erfaring)}
+
+\cventry{2024--2025}{\textbf{OsmToolkit -- OSM Data Processing Library}}{Selvstendig prosjekt}{}{}{
+\begin{itemize}
+  \item \textbf{Beskrivelse:} \textbf{.NET/C\#-bibliotek} for effektiv håndtering av OpenStreetMap (OSM)-data.
+  \item \textbf{Rolle:} Systemarkitekt og datamodelleringsansvarlig. Implementerte serialisering/deserialisering (JSON/XML) og skrev enhetstester.
+  \item \textbf{Resultat:} Robust bibliotek med fokus på ytelsesoptimalisering og pipeline-integrasjon.
+\end{itemize}
+}
+
+\cventry{2023--nå}{\textbf{Sim Racing Stats Dashboard -- Sim Racing Standings}}{Personlig prosjekt}{}{}{
+\begin{itemize}
+  \item \textbf{Beskrivelse:} \textbf{.NET}-løsning som henter, behandler og aggregerer data fra iRacing-API.
+  \item \textbf{Mål:} Generere liga-statistikk og presentere data i et \textbf{dashboard} for intuitiv visualisering.
+  \item \textbf{Utfordringer:} Høy dataflythastighet og begrenset API-dokumentasjon.
+\end{itemize}
+}
+
+% ===== Nøkkelferdigheter =====
+\section{Nøkkelferdigheter \& Egenskaper}
+\cvitem{Løsningsorientert}{Trives med komplekse, nye problemstillinger som krever nøyaktighet og innovasjon.}
+\cvitem{Mestring}{Kontinuerlig læring og eksperimentering for målrettet fullføring.}
+\cvitem{Strategisk}{Analytisk og planmessig; erfaring fra sim racing og gaming overføres til utviklingsarbeid.}
+
+% ===== Utdanning =====
+\section{Utdanning}
+\cventry{2023--2026 (pågående)}{Bachelor i Dataingeniør}{Høgskolen i Østfold, Halden}{}{}{
+Relevante emner: Algoritmer, Databaser, Systemutvikling, Nettverk, Statistikk, Programvarearkitektur.
+}
+
+% ===== Språk =====
+\section{Språk}
+\cvitem{Norsk}{Morsmål}
+\cvitem{Engelsk}{Flytende (skriftlig og muntlig)}
+
+% ===== Interesser =====
+\section{Interesser}
+\cvitem{}{Sim Racing \quad\textbullet\quad Programmering \quad\textbullet\quad Gaming \quad\textbullet\quad OSM/Kartdata \quad\textbullet\quad Backend-design \quad\textbullet\quad C\#/.NET}
+
+% ===== Ekstra info / lenker =====
+\extrainfo{
+\href{https://github.com/dittbrukernavn}{GitHub: dittbrukernavn} \quad\textbullet\quad
+\href{https://www.linkedin.com/in/dittprofil}{LinkedIn: dittprofil}
+}
+
+\end{document}

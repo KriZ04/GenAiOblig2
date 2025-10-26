@@ -1,0 +1,128 @@
+﻿@page "/"
+<PageTitle>Hjem</PageTitle>
+
+<!-- HERO -->
+<section id="home" class="hero" role="region" aria-labelledby="home-title">
+    <div class="hero-inner">
+        <h1 id="home-title">Hei, jeg er Christian, Student og fremtidig Dataingeniør.</h1>
+        <p>
+            Jeg kombinerer akademisk kunnskap med en lidenskap for å bygge effektive og robuste systemer. Mitt mål er å sikre meg en praksisplass eller en jobb der jeg kan bidra til nyskapende prosjekter og kontinuerlig utvikle meg i et profesjonelt miljø.
+        </p>
+        <a class="btn" href="#projects">Se prosjekter</a>
+    </div>
+    <div class="hero-image">
+        <img src="images/hero-placeholder.jpg" alt="Portrettbilde eller illustrasjon" loading="lazy" />
+    </div>
+</section>
+
+<!-- OM MEG -->
+<section id="about" class="section" role="region" aria-labelledby="about-title">
+    <h2 id="about-title">Om meg</h2>
+    <p class="muted">
+        Som en dypt engasjert backend-utvikler, er mitt primærfokus å bygge kjernesystemer som er både skalerbare og sikre. Jeg trives med å være løsningsorientert og er dedikert til å takle komplekse og nye utfordringer som krever nøyaktighet og innovasjon. Jeg bidrar gjerne minimalt på frontend for å sikre sømløs integrasjon, men min ekspertise ligger i å optimalisere ytelsen og integriteten til serverbasert logikk og datastrukturer.
+    </p>
+    <a class="btn" href="cv.pdf" download>Last ned CV (PDF)</a>
+</section>
+
+<!-- INTERESSER -->
+<section id="interests" class="section" role="region" aria-labelledby="interests-title">
+    <h2 id="interests-title">Interesser</h2>
+    <p class="muted">
+        Mine interesser er en viktig drivkraft som bidrar til både balanse og ferdighetsutvikling. Uansett om det gjelder koding eller hobby, er evnen til å utøve strategi og opprettholde et skarpt fokus nøkkelen til suksess.
+    </p>
+
+    <div class="chips">
+        <span class="chip">C# / .NET</span>
+        <span class="chip">Blazor</span>
+        <span class="chip">Sim Racing</span>
+        <span class="chip">Gaming</span>
+        <span class="chip">Backend</span>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <img class="card-img" src="images/interests-dev.jpg" alt="Utvikling" loading="lazy" />
+            <div class="card-body">
+                <h3 class="card-title">Utvikling</h3>
+                <p class="card-text">
+                    Utvikling er mer enn bare en jobb; det er en kontinuerlig prosess for læring og eksperimentering. Gjennom personlige prosjekter får jeg utløp for nysgjerrigheten min, med det klare målet om fullføring. Å lykkes med å løse krevende oppgaver gir en sterk følelse av mestring og bygger selvtillit for nye utfordringer.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="images/interests-sim.jpg" alt="Sim racing" loading="lazy" />
+            <div class="card-body">
+                <h3 class="card-title">Sim Racing</h3>
+                <p class="card-text">
+                    Sim Racing gir en perfekt balanse mellom intens konkurranse og avkobling fra hverdagen. Det krever dyp konsentrasjon, strategisk tenkning og en kontinuerlig jakt på den perfekte rundetiden, noe som speiler den detaljorienterte tilnærmingen jeg har til utvikling.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img" src="images/interests-gaming.jpg" alt="Gaming" loading="lazy" />
+            <div class="card-body">
+                <h3 class="card-title">Gaming</h3>
+                <p class="card-text">
+                    Gjennom strategispill som Civilization V trenes langsiktig planlegging og ressursstyring. I FPS-spill som CS2 utvikles rask beslutningstaking og presisjon. Gaming er min mentale pustepause som samtidig skjerper både min analytiske evne og reaksjonstid.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEKNOLOGI -->
+<section class="section" id="stack" role="region" aria-labelledby="stack-title">
+    <h2 id="stack-title">Teknologi</h2>
+    <ul class="stack">
+        <li><strong>.NET</strong> – Kjernestakken for backend-utvikling. Dyp erfaring med å designe og implementere applikasjoner som leverer høy skalerbarhet og operasjonell robusthet.</li>
+        <li><strong>Frontend</strong> – Minimalt fokus, men tilstrekkelig kunnskap i HTML/CSS for å forstå brukergrensesnitt. Har også erfaring med Blazor for sømløs integrasjon mot .NET-backend.</li>
+        <li><strong>Data</strong> – Solid erfaring med relasjonsdatabaser og optimalisering av SQL-spørringer. Kompetanse i behandling og strukturering av ustrukturert data, spesielt i JSON-format, for effektive dataflyter i backend-systemer.</li>
+        <li><strong>Verktøy</strong> – Sterk kjennskap til versjonskontroll med Git og CI/CD-prosesser i Azure DevOps. Den daglige arbeidsflyten sentreres rundt Visual Studio for effektiv og profesjonell kodeutvikling og feilsøking.</li>
+    </ul>
+</section>
+
+<!-- PROSJEKTER -->
+<section id="projects" class="section">
+    <h2>Utvalgte prosjekter</h2>
+    <p class="muted">Denne seksjonen demonstrerer mine ferdigheter i praksis, og viser teknisk dybde i kjerneområder som datahåndtering og systemarkitektur. Hvert prosjekt reflekterer et sterkt initiativ til å takle reelle utfordringer, og understreker min problemløsningsevne gjennom hele utviklingsprosessen.</p>
+
+    <div class="grid">
+        <ProjectCard Title="OsmToolkit" ImageUrl="images/projects-osm.jpg" Description="Skoleprosjekt fokusert på å bygge et .NET/C#-bibliotek for effektiv håndtering av OpenStreetMap (OSM) data. Som Systemarkitekt modellerte jeg hele systemet og implementerte serialisering/deserialisering av dataen til/fra JSON/XML. Prosjektet la vekt på testdrevet utvikling for å sikre funksjonalitet som filtrering og geolokalisering (finne nærmeste node)." Link="#p1" />
+        <ProjectCard Title="SimRacing Standings" ImageUrl="images/projects-sim.jpg" Description="Et pågående personlig prosjekt bygget i .NET som integrerer mot iRacing-API-et. Formålet er å hente, behandle og strukturere rådata for å generere liga-statistikk og individuelle spillerdata. Målet er å skape et Dashboard for intuitiv datavisualisering, med planer om å utvide til å støtte andre simulasjonsspill." Link="#p2" />
+    </div>
+</section>
+
+<!-- (valgfritt) små detaljer-seksjoner som anker -->
+<section id="p1" class="section">
+    <h3>OsmToolkit</h3>
+    <p class="muted">Dette prosjektet var avgjørende for å styrke kompetansen innen datamodellering og ytelsesoptimalisering av kritiske datastrukturer. Det ga også viktig erfaring med strukturert teamarbeid, moderne enhetstesting og integrasjon i en profesjonell utviklings-pipeline.</p>
+</section>
+<section id="p2" class="section">
+    <h3>SimRacing Standings</h3>
+    <p class="muted">Et kontinuerlig læringsprosjekt som setter fokus på .NET-integrasjon mot eksterne systemer. Prosjektet lærer meg å overvinne utfordringer knyttet til høy databehandlingshastighet og å navigere i et miljø med begrenset dokumentasjon for å sikre nøyaktig statistisk analyse.</p>
+</section>
+
+
+<!-- KONTAKT -->
+<section id="contact" class="section" role="region" aria-labelledby="contact-title">
+    <h2 id="contact-title">Kontakt</h2>
+    <p class="muted">
+        Jeg er alltid åpen for dialog angående nye muligheter innen jobb eller praksis. Hvis du har et komplekst system som trenger en solid backend-løsning, er jeg klar for utfordringen. Ta kontakt for å diskutere hvordan mine ferdigheter kan bidra til ditt neste prosjekt.
+    </p>
+
+    <form class="contact-form" onsubmit="return false">
+        <label>
+            Navn
+            <input type="text" placeholder="Ditt navn" required />
+        </label>
+        <label>
+            E-post
+            <input type="email" placeholder="din@epost.no" required />
+        </label>
+        <label>
+            Melding
+            <textarea rows="5" placeholder="Skriv en melding..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+    </form>
+</section>

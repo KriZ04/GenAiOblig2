@@ -1,0 +1,51 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+<HeadContent>
+    <link rel="stylesheet" href="app.css" />
+    <!-- Bytt til ditt prosjektnavn/assembly -->
+    <link rel="stylesheet" href="GenAiOblig2.styles.css" />
+    <meta name="description" content="Portefølje for Christian – C#/.NET, Blazor, sim racing og data." />
+    <meta property="og:title" content="Christian – Portefølje" />
+    <meta property="og:description" content="Prosjekter, interesser og kontaktinformasjon." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.ico" />
+</HeadContent>
+
+<div class="site">
+    <a class="skip-link" href="#main">Hopp til innhold</a>
+
+    <header class="site-header">
+        <TopNav />
+    </header>
+
+    <main class="site-main" id="main">
+        @Body
+    </main>
+
+    <footer class="site-footer">
+        <Footer />
+    </footer>
+</div>
+
+@code {
+    private IJSObjectReference? _siteModule;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // wwwroot/js/site.js må eksportere function initAll()
+            _siteModule = await JS.InvokeAsync<IJSObjectReference>("import", "/js/site.js");
+            await _siteModule.InvokeVoidAsync("initAll");
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_siteModule is not null)
+        {
+            try { await _siteModule.DisposeAsync(); } catch { /* ignore */ }
+        }
+    }
+}

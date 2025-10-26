@@ -1,0 +1,20 @@
+﻿<nav class="topnav @(isOpen ? "open" : null)">
+    <!-- Valgfri logo/brand; slett hvis du ikke vil ha -->
+    <a class="brand" href="#home">Min Portefølje</a>
+
+    <button class="menu-toggle" @onclick="Toggle" aria-label="Meny" aria-expanded="@isOpen">
+        <span></span><span></span><span></span>
+    </button>
+
+    <div class="links">
+        <a href="#home" class="nav-btn">Hjem</a>
+        <a href="#interests" class="nav-btn">Interesser</a>
+        <a href="#projects" class="nav-btn">Prosjekter</a>
+        <a href="#contact" class="nav-btn">Kontakt</a>
+    </div>
+</nav>
+
+@code {
+    private bool isOpen;
+    private void Toggle() => isOpen = !isOpen;
+}

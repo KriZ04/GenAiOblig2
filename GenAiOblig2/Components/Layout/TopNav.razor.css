@@ -1,0 +1,108 @@
+﻿/* === Sticky (fixed) navbar uten color-mix === */
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    backdrop-filter: blur(6px) saturate(140%);
+    background: rgba(15, 20, 27, 0.88); /* var(--panel) + alpha */
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.brand {
+    font-weight: 800;
+    margin-right: 2rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+/* Pill-knapper */
+.nav-btn {
+    padding: .55rem 1.1rem;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text);
+    font-weight: 600;
+    transition: transform .12s ease, background .18s ease, border-color .18s ease;
+}
+
+    .nav-btn:hover {
+        background: rgba(90,169,255,0.14); /* var(--brand) m/alpha */
+        border-color: rgba(90,169,255,0.28);
+        text-decoration: none;
+        transform: translateY(-1px);
+    }
+
+    .nav-btn.active {
+        background: var(--brand);
+        color: #071625;
+        border-color: transparent;
+        box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    }
+
+    /* Fokus */
+    .nav-btn:focus-visible {
+        outline: 3px solid rgba(90,169,255,0.6);
+        outline-offset: 2px;
+    }
+
+/* Mobil */
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: .6rem;
+    border: 1px solid var(--border);
+    background: #0b1119;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+    .menu-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        margin: 2px 0;
+        background: var(--text);
+    }
+
+@media (max-width: 880px) {
+    .menu-toggle {
+        display: inline-flex;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .links {
+        position: absolute;
+        top: 64px;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        gap: .5rem;
+        background: rgba(15,20,27,0.98);
+        border: 1px solid var(--border);
+        padding: .6rem;
+        border-radius: .75rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .topnav.open .links {
+        display: flex;
+    }
+}
